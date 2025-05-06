@@ -1,17 +1,17 @@
-import { lazy, StrictMode } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-const App = lazy(() => import('./App.tsx'))
+import App from './App.tsx'
 import Layout from './Layout.tsx'
 import { Provider } from 'react-redux'
 import store from './store/store.ts'
-const AuthLayout = lazy(() => import('./components/AuthLayout.tsx'))
-const Working = lazy(() => import('./pages/Working.tsx'))
-const Gameplay = lazy(() => import('./pages/Gameplay.tsx'))
-const Signup = lazy(() => import('./pages/Signup.tsx'))
-const Login = lazy(() => import('./pages/Login.tsx'))
-const Profile = lazy(() => import('./pages/Profile.tsx'))
+import AuthLayout from './components/AuthLayout.tsx'
+import Working from './pages/Working.tsx'
+import Gameplay from './pages/Gameplay.tsx'
+import Signup from './pages/Signup.tsx'
+import Login from './pages/Login.tsx'
+import Profile from './pages/Profile.tsx'
 import { ToastContainer, Slide } from 'react-toastify'
 
 const router = createBrowserRouter(
