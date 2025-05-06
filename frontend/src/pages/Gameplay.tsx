@@ -103,7 +103,7 @@ function Gameplay() {
 
     socket.current?.on('gameOver', ({ winner, disconnected }) => {
       setWinner(winner);
-      console.log(winner)
+      // console.log(winner)
       if (winner != null) {
         if (winner == symbolRef.current) {
           setScore(prev => prev + 1)
