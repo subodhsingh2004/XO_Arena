@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import Loader from './Loader'
 
 interface PropsType {
     children: ReactNode,
@@ -22,5 +23,5 @@ export default function Protected({ children, authentication = true }: PropsType
         setLoader(false)
     }, [authStatus, navigate, authentication])
 
-    return loader ? <h1>Loading...</h1> : <>{children}</>
+    return loader ? <Loader isActive /> : <>{children}</>
 }
