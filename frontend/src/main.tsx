@@ -17,32 +17,32 @@ import { ToastContainer, Slide } from 'react-toastify'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Suspense fallback={<div>Loading.....</div>}/>
-      <Route path="/" element={<Layout />} >
-        <Route index element={<App />} />
-        <Route path='how-it-works' element={<Working />} />
-        <Route path='profile/:id' element={<AuthLayout authentication={true}>
-          {" "}
-          <Profile />
-        </AuthLayout>} />
-        
-        <Route path='/gameplay' element={<AuthLayout authentication={true}>
-          {" "}
-          <Gameplay />
-        </AuthLayout>} />
+      <Suspense fallback={<div>Loading.....</div>}>
+        <Route path="/" element={<Layout />} >
+          <Route index element={<App />} />
+          <Route path='how-it-works' element={<Working />} />
+          <Route path='profile/:id' element={<AuthLayout authentication={true}>
+            {" "}
+            <Profile />
+          </AuthLayout>} />
 
-        <Route path='sign-up' element={<AuthLayout authentication={false}>
-          {" "}
-          <Signup />
-        </AuthLayout>} />
+          <Route path='/gameplay' element={<AuthLayout authentication={true}>
+            {" "}
+            <Gameplay />
+          </AuthLayout>} />
 
-        <Route path='login' element={<AuthLayout authentication={false}>
-          {" "}
-          <Login />
-        </AuthLayout>} />
+          <Route path='sign-up' element={<AuthLayout authentication={false}>
+            {" "}
+            <Signup />
+          </AuthLayout>} />
 
-      </Route>
+          <Route path='login' element={<AuthLayout authentication={false}>
+            {" "}
+            <Login />
+          </AuthLayout>} />
 
+        </Route>
+      </Suspense>
     </Route>
   )
 )
