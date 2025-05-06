@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { Request, Response } from "express";
 import dotenv from "dotenv";
+import path from "path";
 
 dotenv.config();
 
@@ -20,7 +21,6 @@ app.use(cookieParser())
 
 // Import routes
 import userRouter from "./routes/user.route.js";
-import path from "path";
 
 app.use("/api/user", userRouter);
 
@@ -35,7 +35,7 @@ const __dirname1 = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname1, "/frontend/dist")))
 
-  app.get("*", (req, res) => {
+  app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname1, "frontend", "dist", "index.html"))
   })
 } else {
