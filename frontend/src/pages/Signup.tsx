@@ -101,7 +101,7 @@ function Signup() {
                 <div className="w-full flex items-center flex-col space-y-6 md:space-y-10 p-8">
 
                     <div className="flex items-center justify-center relative">
-                        <h2 className="font-[poppins] text-white text-3xl tracking-wide">Create your Account <span className="text-[26px] sm:hidden absolute bottom-1 ml-1">🔒</span></h2>
+                        <h2 className="font-[poppins] font-medium text-white text-3xl tracking-wide">Create your Account <span className="text-[26px] sm:hidden absolute bottom-1 ml-1">🔒</span></h2>
                     </div>
 
                     <form onSubmit={handleSubmit} className="flex flex-col w-full sm:w-[350px]">
