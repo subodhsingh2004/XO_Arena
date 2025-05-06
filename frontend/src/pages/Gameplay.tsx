@@ -41,7 +41,7 @@ function Gameplay() {
 
   useEffect(() => {
 
-    socket.current = io("http://localhost:3000", {
+    socket.current = io(import.meta.env.VITE_API, {
       withCredentials: true
     })
 
