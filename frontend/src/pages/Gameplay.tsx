@@ -134,6 +134,7 @@ function Gameplay() {
 
   const handleCellClick = (index: number) => {
     if (!socket.current) return;
+    if (!connected) return
     if (gameState[index] !== '') return;
     if (winner) return;
     if (symbol !== currentTurn) return;
