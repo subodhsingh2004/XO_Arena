@@ -16,20 +16,16 @@ import { ToastContainer, Slide } from 'react-toastify'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={
-      <Suspense fallback={<div>Loading.....</div>} />
-    }>
+    <Route>
+      
       <Route path="/" element={<Layout />} >
-
         <Route index element={<App />} />
-
         <Route path='how-it-works' element={<Working />} />
-
         <Route path='profile/:id' element={<AuthLayout authentication={true}>
           {" "}
           <Profile />
         </AuthLayout>} />
-
+        
         <Route path='/gameplay' element={<AuthLayout authentication={true}>
           {" "}
           <Gameplay />
@@ -46,6 +42,7 @@ const router = createBrowserRouter(
         </AuthLayout>} />
 
       </Route>
+
     </Route>
   )
 )
