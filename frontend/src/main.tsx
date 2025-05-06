@@ -26,7 +26,7 @@ const router = createBrowserRouter(
           <Profile />
         </AuthLayout>} />
         
-        <Route path='/gameplay' element={<AuthLayout authentication={true}>
+        <Route path='gameplay' element={<AuthLayout authentication={true}>
           {" "}
           <Gameplay />
         </AuthLayout>} />

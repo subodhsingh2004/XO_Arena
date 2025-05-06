@@ -50,10 +50,10 @@ function App() {
             </div>
           </div>
 
-          <div className='space-x-6 font-[JetBrains_Mono]'>
-            <button onClick={handlePlayNow} className={`rounded-md py-1.5 px-3.5 text-white bg-blue-600 hover:bg-blue-700 font-bold cursor-pointer`}>Play Now</button>
+          <div className='space-x-4 md:space-x-6 font-[JetBrains_Mono]'>
+            <button onClick={handlePlayNow} className={`rounded-md py-2 px-3.5 text-white bg-blue-600 hover:bg-blue-700 font-bold cursor-pointer`}>Play Now</button>
             <Link to="/how-it-works">
-              <button className={`rounded-md py-1.5 px-3.5 text-gray-300 transition-all duration-100 hover:bg-[#212121] border border-[#808080] cursor-pointer`}>How it works</button>
+              <button className={`rounded-md py-2 px-3.5 text-gray-300 transition-all duration-100 hover:bg-[#212121] border border-[#808080] cursor-pointer`}>How it works</button>
             </Link>
           </div>
 

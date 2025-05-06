@@ -48,7 +48,7 @@ function Login() {
                 setPassword("")
                 setIsLoading(false)
                 dispatch(loginReducer(response.user))
-                navigate(`/profile/${response.user._id}`)
+                navigate(`profile/${response.user._id}`)
             }
         } catch (error) {
             setIsLoading(false)
