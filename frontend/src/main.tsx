@@ -1,4 +1,4 @@
-import { lazy, StrictMode, Suspense } from 'react'
+import { lazy, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
@@ -17,7 +17,7 @@ import { ToastContainer, Slide } from 'react-toastify'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      
+
       <Route path="/" element={<Layout />} >
         <Route index element={<App />} />
         <Route path='how-it-works' element={<Working />} />
