@@ -1,0 +1,36 @@
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.pulse {
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.gradientText {
+    background: linear-gradient(to right, #155dfc, #fb2c36);
+    /* blue-600 to red-500 */
+    background-size: 200% auto;
+    background-position: 100% 0;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientMove 2s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
