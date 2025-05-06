@@ -35,7 +35,6 @@ export const registerSocketHandlers = (io: Server) => {
   })
 
   io.on('connection', (socket: Socket) => {
-    console.log('Connected:', socket.id);
 
     // socket.onAny((event, ...args) => {
     //   console.log('Received event:', event, args);
@@ -210,7 +209,6 @@ export const registerSocketHandlers = (io: Server) => {
     });
 
     socket.on('disconnect', () => {
-      console.log('Disconnected:', socket.id);
 
       if (waitingPlayer?.id === socket.id) {
         waitingPlayer = null;

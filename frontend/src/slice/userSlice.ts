@@ -53,7 +53,6 @@ const userSlice = createSlice({
             state.isLoggedIn = false;
 
             try {
-                console.log("working")
                 sessionStorage.removeItem("user")
             } catch (err) {
                 console.error("Error removing user from sessionStorage", err)

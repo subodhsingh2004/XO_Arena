@@ -46,7 +46,7 @@ function Gameplay() {
     })
 
     socket.current.on('connect', () => {
-      console.log('Socket connected:', socket.current?.id);
+      // console.log('Socket connected:', socket.current?.id);
     })
 
     setupSocketListeners()

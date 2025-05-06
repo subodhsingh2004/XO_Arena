@@ -22,7 +22,7 @@ export const checkWinner = (board: string[]): 'X' | 'O' | 'draw' | null => {
   ): void => {
     const timeout = setTimeout(() => {
       games.delete(roomId);
-      console.log(`Game in room ${roomId} deleted due to inactivity.`);
+      // console.log(`Game in room ${roomId} deleted due to inactivity.`);
     }, 5 * 60 * 1000); // 5 minutes
   
     const game = games.get(roomId);
@@ -39,7 +39,7 @@ export const checkWinner = (board: string[]): 'X' | 'O' | 'draw' | null => {
     if (game?.timeout) {
       clearTimeout(game.timeout);
       delete game.timeout;
-      console.log(`Timeout for room ${roomId} cleared.`);
+      // console.log(`Timeout for room ${roomId} cleared.`);
     }
   };
   
