@@ -20,23 +20,23 @@ const router = createBrowserRouter(
 
       <Route path="/" element={<Layout />} >
         <Route index element={<App />} />
-        <Route path='how-it-works' element={<Working />} />
-        <Route path='profile/:id' element={<AuthLayout authentication={true}>
+        <Route path='/how-it-works' element={<Working />} />
+        <Route path='/profile/:id' element={<AuthLayout authentication={true}>
           {" "}
           <Profile />
         </AuthLayout>} />
         
-        <Route path='gameplay' element={<AuthLayout authentication={true}>
+        <Route path='/gameplay' element={<AuthLayout authentication={true}>
           {" "}
           <Gameplay />
         </AuthLayout>} />
 
-        <Route path='sign-up' element={<AuthLayout authentication={false}>
+        <Route path='/sign-up' element={<AuthLayout authentication={false}>
           {" "}
           <Signup />
         </AuthLayout>} />
 
-        <Route path='login' element={<AuthLayout authentication={false}>
+        <Route path='/login' element={<AuthLayout authentication={false}>
           {" "}
           <Login />
         </AuthLayout>} />

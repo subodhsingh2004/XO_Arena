@@ -48,7 +48,9 @@ function Login() {
                 setPassword("")
                 setIsLoading(false)
                 dispatch(loginReducer(response.user))
-                navigate(`profile/${response.user._id}`)
+                setTimeout(() => {
+                    navigate(`/profile/${response.user._id}`)
+                }, 200);
             }
         } catch (error) {
             setIsLoading(false)

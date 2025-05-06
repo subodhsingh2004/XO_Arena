@@ -36,7 +36,7 @@ function Working() {
                 </div>
 
                 <Link to="/" className="self-center">
-                    <button className={` mt-6 sm:mt-11 rounded-md py-1.5 px-3.5 w-fit text-gray-300 border border-[#707070] font-[JetBrains_Mono] text-sm hover:bg-[#212121] transition-all duration-100 cursor-pointer`}>Back to Home</button>
+                    <button className={` mt-6 sm:mt-11 rounded-md py-2 px-3.5 w-fit text-gray-300 border border-[#707070] font-[JetBrains_Mono] text-sm hover:bg-[#212121] transition-all duration-100 cursor-pointer`}>Back to Home</button>
                 </Link>
 
             </div>

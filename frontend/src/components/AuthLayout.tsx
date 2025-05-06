@@ -15,6 +15,8 @@ export default function Protected({ children, authentication = true }: PropsType
     const authStatus = useSelector((state: any) => state.user.isLoggedIn)
 
     useEffect(() => {
+        if(authStatus == undefined) return
+        
         if (authentication && authStatus !== authentication) {
             navigate("/login")
         } else if (!authentication && authStatus !== authentication) {
